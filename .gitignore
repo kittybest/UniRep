@@ -11,3 +11,7 @@ EpochKeyValidityVerifier.sol
 ReputationVerifier.sol
 ReputationFromAttesterVerifier.sol
 UserStateTransitionVerifier.sol
+
+#.DS_Store
+.DS_Store
+*/.DS_Store
