@@ -300,13 +300,13 @@ const publishPost = async (args: any) => {
             nullifiers,
             { value: attestingFee, gasLimit: 1000000 }
         )
-        if(args.from_database){
+        if (args.from_database){
             const db = await mongoose.connect(
-            dbUri, 
-             { useNewUrlParser: true, 
-               useFindAndModify: false, 
-               useUnifiedTopology: true
-             }
+                dbUri, 
+                { useNewUrlParser: true, 
+                  useFindAndModify: false, 
+                  useUnifiedTopology: true
+                }
             )
             const res: IPost = await newpost.save()
             db.disconnect();

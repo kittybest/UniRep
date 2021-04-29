@@ -215,7 +215,7 @@ const leaveComment = async (args: any) => {
     
     let circuitInputs: any
 
-    if(args.from_database){
+    if (args.from_database){
 
         console.log('generating proving circuit from database...')
         
@@ -296,12 +296,13 @@ const leaveComment = async (args: any) => {
             nullifiers,
             { value: attestingFee, gasLimit: 1000000 }
         )
-        if (args.from_database) {
+
+        if(args.from_database){
             const db = await mongoose.connect(
                 dbUri, 
                 { useNewUrlParser: true, 
-                useFindAndModify: false, 
-                useUnifiedTopology: true
+                  useFindAndModify: false, 
+                  useUnifiedTopology: true
                 }
             )
             const commentRes = await Post.findByIdAndUpdate(
