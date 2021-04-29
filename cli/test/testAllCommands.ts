@@ -37,7 +37,7 @@ describe('test all CLI subcommands', function() {
     const epochLength = 5
     let unirepContract: ethers.Contract
     let unirepState: UnirepState
-    const dbOption = `` // `-db`
+    const dbOption = ` -db` // `-db`
     
     let userIdentity1, userIdentityCommitment1, userIdentity2, userIdentityCommitment2
     const attesterId = 1
